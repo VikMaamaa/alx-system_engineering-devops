@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -A1 | sort -k1.1,1.1d -k1.2,1.2 -t. | awk '{ printf "%s%s", $0, (NR == 1 || NR == 2) ? "," : (NF == 1) ? "/\n" : ", " }'
